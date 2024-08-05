@@ -16,6 +16,11 @@ emailForm.addEventListener('submit', function(event) {
     const emailExpression=  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if(emailExpression.test(email.value)){
+
+        errorMessage.style.display='none';
+        email.style.color='hsl(235, 18%, 26%)';
+        email.style.border='1px solid hsl(231, 7%, 60%)';
+        email.style.backgroundColor='hsl(0, 0%, 100%)';
         mainContainer.style.display='none';
         messageContainer.style.display='flex';
        
