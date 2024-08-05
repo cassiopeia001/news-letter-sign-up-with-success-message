@@ -1,0 +1,220 @@
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Orange: hsl(347, 100%, 66%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+
+}
+body{
+    background-color: var(--Dark-Slate-Grey);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    background-color: var(--White);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.image-container{
+    width: 100%;
+}
+
+
+.image-container img{
+    width: 100%;
+    max-height: 400px;
+}
+.text-container{
+    width: 100%;
+    padding: 2rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.text-container h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+    margin-bottom: 1rem;
+}
+p{
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--Charcoal-Grey);
+    font-weight: 400;
+}
+.text{
+    margin-bottom: 1.5rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--Charcoal-Grey);
+}
+li::before{
+    content: url(assets/images/icon-list.svg);
+}
+li{
+    display: flex;
+    gap: 1rem;
+} 
+
+form label{
+    
+    font-size: 0.70rem;
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+form label span{
+    display: flex;
+}
+form label h4{
+    display: none;
+    color: var(--Tomato);
+    margin-left: auto;
+}
+form input{
+    width: 100%;
+    font: inherit;
+    font-weight: 400;
+    padding: 0.8rem;
+    margin-bottom: 1.1rem;
+    border-radius: 0.4rem;  
+}
+form input:hover{
+    cursor: pointer;
+}
+form input:focus{
+    outline: none; 
+    border-color: inherit;
+}
+form input[type=text]{
+    color: var(--Charcoal-Grey);
+    border: 1px solid var(--Grey);
+}
+form input[type=submit]{
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    font-weight: 700;
+}
+form input[type=submit]:hover{
+    background: linear-gradient(90deg, var(--Orange), var(--Tomato));
+}
+.message-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--White);
+    height: 100vh;
+    padding: 1.5rem;
+    margin: 0;
+}
+.message-container img{
+    
+    margin-bottom: 1.75rem;
+    width: 3.5rem;
+}
+.text-div{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.text-div h1{
+    color: var(--Dark-Slate-Grey);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.text-div button{
+
+    margin-top: auto;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    font-weight: 700;
+    padding: 0.8rem;
+    border-radius: 0.4rem; 
+
+}
+.text-div button:hover{
+    background: linear-gradient(90deg, var(--Orange), var(--Tomato)) ;
+    cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+    
+    .main-container{
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 1.2rem;
+        padding: 0;
+        
+    }
+    .image-container {
+        order: 2;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .image-container img{
+    
+        height: 30rem;
+        max-height: 100%;
+        width: 100%; 
+    }
+    .text-container{
+       padding-left: 3rem;
+    
+    }
+    .text-container h1{
+        font-size:  3rem;    
+    }
+    .message-container{
+        width: 35%;
+        height: auto;
+        border-radius: 1.5rem;
+        padding: 3rem;
+    }
+    .text-div p{
+        margin-bottom: 2rem;
+    }
+    
+}
