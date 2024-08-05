@@ -5,6 +5,7 @@ const messageContainer=document.getElementById("messageContainer");
 const mainContainer= document.getElementById("mainContainer");
 const email=document.getElementById("email");
 const dismiss= document.getElementById("dismiss");
+const emailVal=document.getElementById("email-val");
 
 
 
@@ -23,6 +24,7 @@ emailForm.addEventListener('submit', function(event) {
         email.style.backgroundColor='hsl(0, 0%, 100%)';
         mainContainer.style.display='none';
         messageContainer.style.display='flex';
+        emailVal.innerHTML=email.value;
        
     }
     else{
